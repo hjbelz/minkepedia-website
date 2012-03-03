@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+<project name="minkepedia.org" default="compile" basedir=".">
+	<description>Build file of minkepedia.org</description>
+
+	<!-- 
+	 set global properties for this build 
+	 -->
+	<property name="src.layout"          location="src/site/mustache"/>
+	<property name="src.pages"           location="src/site/mustache/pages"/>
+	<property name="src.resources"       location="src/site/resources"/>
+	<property name="src.less"            location="src/site/less"/>
+	<property name="build"               location="build"/>
+	<property name="build.site"          location="build/site"/>
+	<property name="build.site.css"      location="build/site/css"/>
+	<property name="dist"                location="dist"/>
+
+	<target name="init" depends="clean">
+		<!-- Create the time stamp -->
+		<tstamp>
+			<format property="time.build" pattern="yyyy-MM-dd HH:mm:ss" locale="en,US"/>
+	  </tstamp>
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}"/>
+		<mkdir dir="${build.site}"/>
+		<mkdir dir="${build.site.css}"/>
+	</target>
+
+	<target name="compile" depends="init, copy-static, compile-less"
+        description="compile the site templates" >
+
+		<!-- Generate individual layout template for every page. TODO: Switch to hogan.js :-) -->
+		<antcall target="create-layout-templates">
+
+			<param name="template.name" value="index"/>
+			<param name="template.pageTitle" value="Social Knowledge Mapping"/>
+			
+			<param name="template.searchTitle" value="Minkepedia - Social Knowledge Mapping"/>
+			<param name="template.searchDesc" value="An experiment in social knowledge mapping: Collaborative creation of terms and maps comprehensively depicting concepts from technology and business."/>
+			<param name="template.searchKeywords" value="minkepedia,social knowledge mapping,knowledge management,topic maps"/>
+		</antcall>
+
+    <antcall target="create-layout-templates">
+
+    	<param name="template.name" value="about"/>
+      <param name="template.pageTitle" value="About the project"/>
+    	
+      <param name="template.searchTitle" value="About the project"/>
+      <param name="template.searchDesc" value="Introduction to the project, its mission and its basic elements."/>
+      <param name="template.searchKeywords" value="minkepedia,social knowledge mapping,minke maps,minke terms"/>    	
+    </antcall>
+		
+    <antcall target="create-layout-templates">
+    	
+      <param name="template.name" value="theWhale"/>
+      <param name="template.pageTitle" value="The Story of the Whale"/>
+    	
+      <param name="template.searchTitle" value="The Story of the Whale"/>
+      <param name="template.searchDesc" value="The story behind the name of Minkepedia."/>
+      <param name="template.searchKeywords" value="minkepedia,sea of knowledge,minke whale"/>    	
+    </antcall>
+		
+    <antcall target="create-layout-templates">
+      
+    	<param name="template.name" value="theSpecs"/>
+      <param name="template.pageTitle" value="Technologies And Design Principles"/>
+    	
+      <param name="template.searchTitle" value="Technologies And Design Principles"/>
+      <param name="template.searchDesc" value="An introduction to the technology stack and the guiding design principles."/>
+      <param name="template.searchKeywords" value="minkepedia,technology,design,gwt,svg"/>
+    </antcall>
+
+    <antcall target="create-layout-templates">
+    	
+      <param name="template.name" value="news"/>
+      <param name="template.pageTitle" value="Roadmap"/>
+    	
+      <param name="template.searchTitle" value="Roadmap"/>
+      <param name="template.searchDesc" value="Next steps of the Minkepedia project."/>
+      <param name="template.searchKeywords" value="minkepedia,roadmap"/>
+    </antcall>
+		
+		<antcall target="create-layout-templates">
+			
+			<param name="template.name" value="contact"/>
+			<param name="template.pageTitle" value="Contact"/>
+			
+      <param name="template.searchTitle" value="Contact"/>
+      <param name="template.searchDesc" value="The contact page of the Minkepedia project."/>
+      <param name="template.searchKeywords" value="minkepedia,contact"/>
+		</antcall>
+		
+    <!-- Create site pages from generated mustache templates -->
+    <apply executable="mustache" parallel="false" force="true">
+      <fileset dir="${build}" includes="*.mustache"/>
+      <redirector outputencoding="UTF8">
+        <outputmapper type="glob" from="*.mustache" to="${build.site}${file.separator}*.html" />
+        <outputfilterchain>
+          <filterreader classname="org.apache.tools.ant.filters.ExpandProperties"/>
+        </outputfilterchain>
+      </redirector>
+      <!-- Abusing targetfile mechanism to pass YAML file to mustache. That's why we have to FORCE the apply task. -->   
+      <mapper type="glob" from="*.mustache" to="${build}${file.separator}*.yml"/>
+      <targetfile/>
+    </apply>
+				
+	</target>
+	
+	
+  <!--
+   Target: Copies all static resources into the build package. 
+  -->
+  <target name="copy-static">
+  	
+    <!-- Copy static resources into build package -->
+    <copy todir="${build.site}">
+      <fileset dir="${src.resources}"/>
+    </copy>
+  </target>
+	
+
+	<!--
+	 Target: Creates an individual copy of the mustache layout template for the passed page. 
+	-->
+	<target name="create-layout-templates">
+
+		<echo message="Creating layout for page ${template.name}" level="info" />
+
+		<copy file="${src.layout}/layout.mustache" 
+			    tofile="${build}${file.separator}${template.name}.mustache">
+			<filterchain>
+				<expandproperties />
+			</filterchain>
+		</copy>
+		
+    <copy file="${src.layout}/layout.yml" 
+          tofile="${build}${file.separator}${template.name}.yml">
+      <filterchain>
+        <expandproperties />
+      </filterchain>
+    </copy>
+
+	</target>
+
+
+  <!--
+   Target: Compiles the LESS files. 
+  -->
+  <target name="compile-less">
+
+  	<apply executable="lessc" parallel="false" dir="${src.less}">
+  		<filelist dir="${src.less}">
+  		  <file name="custom-bootstrap.less" />	 
+  			<file name="custom-responsive.less" />
+  			<file name="minkepedia.less" />
+  		</filelist>
+      <redirector outputencoding="UTF8">
+        <outputmapper type="glob" from="*.less" to="${build.site.css}${file.separator}*.css" />
+      </redirector>
+    </apply>
+  	
+	</target>
+
+	
+	
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}/lib"/>
+
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+		<jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
+	</target>
+
+	<target name="clean"
+        description="clean up" >
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+	</target>
+</project>

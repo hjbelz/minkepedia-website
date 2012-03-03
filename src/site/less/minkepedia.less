@@ -1,0 +1,284 @@
+/*!
+ * Custom Minkepedia Definitions 
+ *
+ * Copyright 2009-2012 minuteFForts
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
+// Minkepedia.less
+// Custom definitions for the content of Minkepedia.org (both responsive and default)
+// -------------------------------------------------------------
+
+
+// REPEAT VARIABLES & MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+
+@import "variables.less"; // *** CUSTOMIZED ***
+@import "bootstrap/mixins.less";
+
+
+// GENERAL
+// -------
+
+body {
+    padding-top: 90px;
+}
+
+
+
+// HERO UNIT
+// ---------
+
+.hero-unit {
+  img {
+    float: left;
+    margin: 0px 12px 0px 4px;
+    height: 240px;
+    width: 264px;
+  }
+  
+  .img-side-txt {
+    float:left;
+  }
+}
+
+// Main Page Header
+// ----------------
+
+.main-header {
+  h1 {
+    font-size: 54px;
+    margin-bottom: 9px;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+}
+
+// Page Header
+// ----------------
+
+.withIcon {
+  h1 {
+    padding-top: 28px;
+    padding-left: 110px;
+  }
+  
+  h2 {
+    padding-top: 14px;
+    padding-left: 84px;
+  }
+  
+  img {
+    float:left;
+    height: 90px;
+    width: 90px;
+  }
+  
+  .smallIcon {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+
+// Section
+// -------
+
+section {
+    padding-top: 60px;
+}
+
+
+// Footer
+// ------
+
+.footer p {
+    color: #555555;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    line-height: normal;
+}
+
+
+
+// Social Bar
+// ----------
+
+#socialBar {
+  margin-bottom: 30px;
+  
+  a, iframe, div {
+    float: right;
+    margin: 0px 0px 5px 20px;
+  }
+}
+
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+  
+  .main-header h1 {
+    font-size: 40px;
+  }
+}
+
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 768px) {
+
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  
+  .hero-unit {
+
+    padding: 30px;
+  
+    h1 {
+      font-size: 20px;
+      line-height: 1;
+      padding-bottom: 20px;
+    }
+    
+    p {
+      font-size: @baseFontSize;
+      line-height: @baseLineHeight;
+    }
+    
+    .img-side-txt {
+      width: auto;
+    }
+    
+    img {
+      float: none;
+      display: block;
+      margin: 0px auto 12px;
+      height: 120px;
+      width: auto;
+    }
+  }  
+}
+
+
+
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media (min-width: 768px) and (max-width: 980px) {
+
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  
+  .hero-unit {
+
+    h1 {
+      font-size: 30px;
+      line-height: 1;
+      padding-bottom: 20px;
+    }
+    
+    p {
+      font-size: @baseFontSize + 2;
+      line-height: @baseLineHeight + 2;
+    }
+  
+    .img-side-txt {
+       width: 70%;
+    }
+    
+    img {
+      float: left;
+      margin: 0px 12px 0px 4px;
+      height: auto;
+      width: 20%;
+    }
+  }
+}
+
+
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: 980px) {
+  
+  section {
+    padding-top: 20px;
+  }
+}
+
+
+
+// DEFAULT DESKTOP
+// ---------------
+
+@media (min-width: 980px) {
+  
+  .hero-unit {
+
+    h1 {
+      font-size: 30px;
+      line-height: 1;
+      padding-bottom: 20px;
+    }
+    
+    p {
+      font-size: @baseFontSize + 2;
+      line-height: @baseLineHeight + 2;
+    }
+  
+    .img-side-txt {
+      width: 70%;
+    }
+    
+    img {
+      float: left;
+      margin: 0px 12px 0px 4px;
+      height: auto;
+      width: 20%;
+    }
+  }
+}
+
+
+
+// LARGE DESKTOP & UP
+// ------------------
+
+@media (min-width: 1200px) {
+
+.hero-unit {
+    h1 {
+      font-size: 40px;
+      line-height: 2;
+    }
+    p {
+      font-size: 16px;
+      line-height: 21px;
+    }
+    
+    .img-side-txt {
+      width: 640px;
+    }
+    
+    img {
+      float: left;
+      margin: 0px 12px 0px 4px;
+      height: 240px;
+      width: 264px;
+    }
+  }
+}

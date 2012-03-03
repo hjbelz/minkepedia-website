@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 158.40001 144"
+  width="158.40001pt" height="12pc">
+  <defs>
+    <radialGradient cx="0" cy="0" r="1" id="Gradient" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c78fe" />
+      <stop offset="1" stop-color="#a5cafe" />
+    </radialGradient>
+    <radialGradient id="Obj_Gradient" xlink:href="#Gradient" gradientTransform="translate(67.48284 27.958977) scale(105.58722)" />
+    <linearGradient x1="0" x2="1" id="Gradient_2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffc1" />
+      <stop offset=".5" stop-color="#ffff30" stop-opacity=".77999997" />
+      <stop offset="1" stop-color="#ffffc1" />
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_2" xlink:href="#Gradient_2"
+      gradientTransform="translate(115.750793 6.666668) rotate(90) scale(33.16272)" />
+  </defs>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <g>
+      <path
+        d="M 30.04307 51.770828 C 30.04307 51.770828 2.4968433 94.706467 11.189043 91.414757 C 19.881399 88.12332 29.542624 68.50023 36.221008 77.39395 C 42.89927 86.287544 30.04307 51.770828 30.04307 51.770828 Z"
+        fill="#488dfe" />
+      <path
+        d="M 58.731964 6.7594833 C 43.862057 6.8537903 32.945377 20.455429 27.842857 36.48729 C 22.741531 52.51969 49.991333 114.73226 49.991333 114.73226 C 49.991333 114.73226 1.14658356 144.724075 16.056992 141.12543 C 30.967506 137.52785 83.92578 140.61197 95.236694 141.63928 C 106.5477 142.66742 59.759785 114.388794 59.759785 114.388794 C 59.759785 114.388794 67.472725 59.03329 80.32563 46.349293 C 93.179924 33.66732 125.05609 43.607704 121.458435 35.552513 C 117.858826 27.497189 73.602287 6.6665344 58.731964 6.7594833 Z"
+        fill="url(#Obj_Gradient)" />
+      <path d="M 74.786346 24.582161 L 156.71524 6.66667 L 156.71524 39.829384 Z" fill="url(#Obj_Gradient_2)" />
+      <line x1="50.465454" y1="115.666634" x2="28.356993" y2="138.289215" stroke="#4e6a94" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="1" />
+      <line x1="52.865017" y1="115.66659" x2="41.21077" y2="137.260864" stroke="#4e6a94" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="1" />
+      <line x1="55.521133" y1="115.66659" x2="53.293324" y2="137.260864" stroke="#4e6a94" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="1" />
+      <line x1="58.348965" y1="115.66659" x2="63.062183" y2="137.260864" stroke="#4e6a94" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="1" />
+      <line x1="60.405567" y1="115.666634" x2="80.200386" y2="138.289215" stroke="#4e6a94" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="1" />
+    </g>
+  </g>
+</svg>

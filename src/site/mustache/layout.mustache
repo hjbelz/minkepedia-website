@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minkepedia | {{pageTitle}}</title>
+    <meta charset="utf-8">
+    <!--  TODO add some more prefetching (e.g. Google Analytics -->
+    <link rel="dns-prefetch" href="//minkepedia.appspot.com">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+      [Start] Search Engine 
+      -->
+    <meta name="title" content="{{searchTitle}}">
+    <meta name="description" content="{{searchDesc}}">
+    <meta name="keywords" content="{{searchKeywords}}">
+    {{#index}}<link rel="canonical" href="http://www.minkepedia.org" />{{/index}}
+    
+    <!-- 
+      [End]   Search Engine 
+      -->
+    
+    <!-- 
+      [Start] Facebook OG 
+      -->
+    <meta property="og:title" content="Minkepedia - Social Knowledge Mapping"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://minkepedia.org"/>
+    <!--  TODO Add correct facebook logo -->
+    <meta property="og:image" content="http://minkepedia.org/img/minke-logo_150.png"/>
+    <meta property="og:site_name" content="Minkepedia"/>
+    <meta property="fb:admins" content="100000230148838"/>
+    <meta property="og:description"
+          content="An experiment in social knowledge mapping: Collaborative creation of terms and maps comprehensively depicting concepts from technology and business."/>
+    <!-- 
+      [End]   Facebook OG 
+      -->
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- styles -->
+    <link href="css/custom-bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/custom-responsive.css" rel="stylesheet">
+    <link href="css/minkepedia.css" rel="stylesheet">
+
+    <!-- 
+      [Start] Icons 
+      -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icon-ipad-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icon-iphone4-precomposed.png" />
+    <!-- 
+      [End]  Icons 
+      -->
+
+    <!-- 
+      [Start] Google Analytics 
+      -->
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-29357525-1']);
+		  _gaq.push(['_setDomainName', 'minkepedia.org']);
+		  _gaq.push(['_setAllowLinker', true]);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+		<!-- 
+      [End]   Google Analytics 
+      -->
+  </head>
+
+  <body> 
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html"><img style="float:left; margin: 0px 12px 0px 4px; height: 20px" src="img/minke-logo.svg">Minkepedia</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li {{#about}}class="active"{{/about}}><a href="about.html">About</a></li>
+              <li {{#theWhale}}class="active"{{/theWhale}}><a href="theWhale.html">The Whale</a></li>
+              <li {{#theSpecs}}class="active"{{/theSpecs}}><a href="theSpecs.html">The Specs</a></li>
+              <li {{#news}}class="active"{{/news}}><a href="news.html">Roadmap</a></li>
+              <li {{#contact}}class="active"{{/contact}}><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+	    <!--  
+	      [Start] Template of "{{page}}".  
+	      -->
+	     
+	    {{> src/site/mustache/pages/${template.name}}}
+	    
+	    <!--
+	      [End]   Template of "{{page}}".  
+	      -->
+
+
+      <hr>
+
+      <footer class="footer">
+        <p>&copy; minuteFForts (Hans-Joachim Belz) 2012</p>
+        
+        <p>Code licensed under the
+          <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.
+          Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+        </p>
+        <p>Site design based on the excellent <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>.</p>
+        <p><span style="font-size: .8em">Last Update {{lastUpdate}}.</span></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!--  
+      [Start] Load scripts  
+      -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <!--  
+      [End]   Load scripts  
+      -->
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+# eclipse project #
+###################
+.project
+
+# Compiled source #
+###################
+*.class
+
+# tmp dirs #
+############
+build/**/*
+dist/**/*
+*~
+
+# Packages #
+############
+*.iso
+*.rar
+*.tar
+*.zip
+
+# Logs #
+########
+*.log
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+

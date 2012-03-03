@@ -1,0 +1,9 @@
+--- # Ant YAML template for passing context to the generated mustache layout templates. Crude but works. :-) 
+page: ${template.name}
+lastUpdate: ${time.build}
+pageTitle: ${template.pageTitle}
+searchTitle: ${template.searchTitle}
+searchDesc: "${template.searchDesc}"
+searchKeywords: ${template.searchKeywords}
+${template.name}: active
+---
