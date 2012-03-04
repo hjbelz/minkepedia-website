@@ -24,7 +24,6 @@ Authors
 **Hans-Joachim Belz**
 
 + http://twitter.com/minutefforts
-+ http://github.com/hjbelz
 + http://www.minutefforts.com
 
 
