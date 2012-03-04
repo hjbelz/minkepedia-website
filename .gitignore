@@ -8,8 +8,8 @@
 
 # tmp dirs #
 ############
-build/**/*
-dist/**/*
+build
+dist
 *~
 
 # Packages #
