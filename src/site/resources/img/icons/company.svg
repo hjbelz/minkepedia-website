@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 144 144"
+  width="12pc" height="12pc">
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <g>
+      <circle cx="72.106766" cy="71.893234" r="63.106873" fill="#54add4" />
+      <path
+        d="M 23.658962 67.026695 L 72.106766 25.5 L 120.5546 67.026695 L 99.791245 67.026695 L 99.791245 108.55339 L 44.422314 108.55339 L 44.422314 67.026695 Z"
+        fill="white" />
+    </g>
+  </g>
+</svg>
