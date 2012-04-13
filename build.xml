@@ -46,8 +46,18 @@
       <param name="template.pageTitle" value="About the project"/>
     	
       <param name="template.searchTitle" value="About the project"/>
-      <param name="template.searchDesc" value="Introduction to the project, its mission and its basic elements."/>
-      <param name="template.searchKeywords" value="minkepedia,social knowledge mapping,minke maps,minke terms"/>    	
+      <param name="template.searchDesc" value="Introduction to the project Minkepedia."/>
+      <param name="template.searchKeywords" value="minkepedia,social knowledge mapping,minke maps,minke terms, about"/>    	
+    </antcall>
+		
+    <antcall target="create-layout-templates">
+
+      <param name="template.name" value="tutorial"/>
+      <param name="template.pageTitle" value="Tutorial"/>
+      
+      <param name="template.searchTitle" value="Tutorial"/>
+      <param name="template.searchDesc" value="How to use Minkepedia"/>
+      <param name="template.searchKeywords" value="minkepedia,social knowledge mapping,minke maps,minke terms, tutorial, how to"/>      
     </antcall>
 		
     <antcall target="create-layout-templates">

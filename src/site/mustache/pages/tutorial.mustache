@@ -1,0 +1,215 @@
+<header class="main-header">
+  <h1>The Tutorial</h1>
+  <p class="lead">How to use Minkepedia</p>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li><a href="#generalusage">General Usage</a></li>
+      <li><a href="#minkemaps">Minke Maps</a></li>
+      <li><a href="#minketerms">Minke Terms</a></li>
+      <li><a href="#mobileready">Mobile Ready</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<section id="generalusage">
+
+  <div class="page-header">
+    <h1>
+      General Usage <small>Basic concepts of the user interface</small>
+    </h1>
+    <br clear="all">
+  </div>
+
+
+
+  <div class="row">
+    <div class="span6">
+      <p>Minkepedia has two main views or operating modes. You can either browse (and edit) <em>Minke Terms</em> 
+      using the <em>Term View</em> or you can browse (and edit) <em>Minke Maps</em> using the <em>Map View</em>. You 
+      can freely switch between modes at any time. The respective view will remember its last state and restore it, once 
+      you go back.</p>
+      <p>Using the little caret to the right of the split buttons, you can browse a list of maps or terms, respectively.</p>
+      <p>Anonymous users can freely view all terms and all published maps. If you want to edit or create something, you
+      need to login first (use login link at the right end of the header bar). In order to be able to login, you need
+      a Google account and you must be registered. Please note, that currently registering is restricted to 
+      personal invitations.</p> 
+    </div>
+    
+    <div class="span6">
+		  <img src="img/screens/button_bar_views.png" alt="These buttons switch between the main views.">
+		  <p>Top bar: The buttons for switching between the main views</p>
+    </div>  
+    
+  </div>  
+</section>
+
+
+
+<section id="minkemaps">
+
+  <div class="page-header withIcon">
+    <img src="img/icons/map.svg" alt="Minke Map Icon">
+    <h1>
+      Minke Maps <small>Visualizing complex knowledge fields</small>
+    </h1>
+    <br clear="all">
+  </div>
+ 
+  <div class="row">
+    <div class="span6">
+      <p>Minke Maps can be used to depict views on complex areas of knowledge (like business concepts or market relations). 
+      They can be highly individual expressing the particular views and insights of the author. Or they can strive to
+      shed a broad and objective light on some complex concept. As individual creations Minke Maps are attributed to 
+      theirs author or group of authors. In  the future, users will be able to fork existing Minke Maps to create their 
+      own variations.</p>           
+            
+      <p>In their structure and composition, Minke Maps are similar to <a href="http://en.wikipedia.org/wiki/Mind_map" target="_blank">Mind Maps</a> 
+      in that they are hierarchical compositions of terms (i.e. one or more words) around a common topic or idea. The 
+      nodes in a Minke Map diagram will mostly consist of <a href="#minketerms">Minke Terms</a> - pre-defined concepts
+      and entities, which can be added to the map retaining their relations to other terms and providing referential 
+      links. Once a Minke Term is added to a map it can be individually decorated. Currently, the user can add a comment,
+      rank a term and select one of its parent terms as a prefix to the graphical rendition of the respective diagram node.
+      Hover over a map node or tap it, to see all additional information provided for it.</p>
+      
+      <p>In addition to adding Minke Terms to a map, a user can also create individual <em>caption nodes</em> which can 
+      be freely labeled with any kind of text. Caption nodes will mostly serve as a way of introducing structure 
+      elements specific to my composition of terms (i.e. not part of the Minke Term hierarchy).</p>
+      
+      <p>There will also soon be the possibility to add diagram nodes linking to other Minke Maps. With map links a 
+      network of Minke Maps can be created to present related topics in a structured way.</p>
+    </div>
+    
+    <div class="span6">
+      <ul class="thumbnails">
+        <li class="span6">
+          <a href="http://minkepedia.appspot.com/#MapViewPlace:agptaW5rZXBlZGlhchALEghNaW5rZU1hcBjyqwEM" class="thumbnail" target="_blank">
+            <img src="img/screens/mobile_eco_map.png" alt="Example Minke Map">
+          </a>
+          <p>Example: A Minke Map about the mobile ecosystem<br> <em>(Click image to view the Minke Map)</em></p>
+        </li>
+      </ul>
+    </div> 
+  </div>  
+  
+  
+        
+  <div class="row" style="padding-bottom: 16px"> 
+    <div class="span6">
+      <h3>Example Minke Term</h3>
+      <img src="img/screens/minketermmapnode.png" alt="" class="thumbnail">
+      <p style="padding-top: 12px;">An example for a map node based on a Minke Term: The person "Ian Hickson" prefixed with the parent Minke Term
+      "Google Inc" (Ian Hicksons's employer) and a map-specific comment (yellow bubble). In addition, two references
+      provided by the Minke Term are visible: A Wikipedia link (the article about "Ian Hickson") and a website link
+      (Ian Hickson's blog).</p>
+    </div>
+    
+    <div class="span6">
+      <h3>Example Caption</h3>
+      <img src="img/screens/captionnode.png" alt="" class="thumbnail">
+      <p style="padding-top: 12px;">The yellow caption node "People" has been created by the map author to provide a map-specific grouping.</p>      
+    </div>
+  </div>
+</section>
+
+
+<section id="minketerms">
+ 
+  <div class="page-header withIcon">
+    <img src="img/icons/term.svg" alt="Minke Term Icon">
+    <h1>
+      Minke Terms <small>The global building blocks of knowledge maps</small>
+    </h1>
+    <br clear="all">
+  </div>
+ 
+  <div class="row">
+    <div class="span8">
+      <p>Universal (i.e. reusable) terms and their relationships to one another. Minke Terms are maintained collectively 
+      by all users. Minke Terms are the main building blocks of <a href="#minkemaps">Minke Maps</a>. Currently, four different types of Minke 
+      Terms are supported:</p>
+  
+      <div class="row" style="padding-bottom: 16px">    
+	      <div class="span4 withIcon">
+	        <img alt="Icon of entity 'Concept'" src="img/icons/concept.svg" class="smallIcon">
+	        <h2>Concept</h2>
+	        <br clear="all">
+	        The entity <em>concept</em> represents all kinds of abstract terms that only exist as ideas, concepts,
+	        procedures, etc. 
+	      </div>
+	      <div class="span4 withIcon">
+	        <img alt="Icon of entity 'Product'" src="img/icons/product.svg" class="smallIcon">
+	        <h2>Product</h2>
+	        <br clear="all">
+	        A <em>product</em> is a commercial or non-commercial product or a family of product variants. 
+	        Note, that a generic label for a group of products (like 'Android Phone' or 'Web Application Framework') is 
+	        thought to be a <em>concept</em>. 
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="span4 withIcon">
+	        <img alt="Icon of entity 'Person'" src="img/icons/person.svg" class="smallIcon">
+	        <h2>Person</h2>
+	        <br clear="all">
+	        A <em>person</em> represents (exactly) one real life human being. Only people central to some other Minke Term
+	        (i.e. in the role of creators, founders, leaders, main influencers, etc.) should be represented in Minkepedia.  
+	      </div>
+	      <div class="span4 withIcon">
+	        <img alt="Icon of entity 'Organization'" src="img/icons/company.svg" class="smallIcon">
+	        <h2>Organization</h2>
+	        <br clear="all">
+	        <em>Organization</em> is a generic entity for any kind of organization including companies, associations, 
+	        foundations, institutions, etc. 
+	      </div>
+	    </div>
+    </div>
+    
+    <div class="span4">
+      <ul class="thumbnails">
+        <li class="span4">
+          <div>
+	          <a href="http://minkepedia.appspot.com/#TermViewPlace:Windows%2520Phone%2520(OS)" class="thumbnail" target="_blank">
+	            <img src="img/screens/windows_phone_term.png" alt="Example Minke Term 'Windows Phone'">
+	          </a>
+	          <p>Example: The operating system 'Windows Phone'<br> <em>(Click image to browse Minke Terms)</em></p>
+          </div>
+        </li>
+      </ul>
+    </div>  
+  </div>  
+</section>
+
+
+<section id="mobileready">
+
+  <div class="page-header">
+    <h1>
+      Mobile Ready <small>Knowledge mapping on the go</small>
+    </h1>
+    <br clear="all">
+  </div>
+ 
+  <div class="row">
+    <div class="span6">
+      <p>Well, sort of mobile ready. Tablets are definitely a focus platform. Minkepedia will work on iPad, Android (V3.x) 
+      tablets and other SVG-enabled mobile browsers. Minkepedia will work on smartphones, 
+      too, although admittedly the user experience is not optimized for small screens. Editing maps will mean you have to
+      do a lot of scrolling back and forth.  There just might be an alternative web interface for smartphones later.</p>
+      <p>There is support for web clips. So when using the Minkepedia cloud app at 
+      <a href="http://minkepedia.appspot.com" title="Minkpedia">minkepedia.appspot.com</a>, you can add a nice whale 
+      icon to your home screen.</p> 
+    </div>
+    
+    <div class="span6">
+      <img src="img/screens/webclip.png" alt="Image of an example Minke Map" 
+           alt="Screenshot with Minkepedia web clip on iPad"
+           title="Screenshot with Minkepedia web clip on iPad">
+      <p>Screenshot (iPad): Web clip icon of Minkepedia on the home screen</em></p>
+    </div>  
+    
+  </div>  
+</section>
+
+
+
+
